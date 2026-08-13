@@ -1,6 +1,6 @@
 import usePageTitle from '../hooks/usePageTitle.js';
 import { Link } from 'react-router-dom';
-import logo from '../assets/image/logo.png';
+import logo from '../assets/image/logo.webp';
 
 function ErrorPage() {
   usePageTitle('Page Introuvable');

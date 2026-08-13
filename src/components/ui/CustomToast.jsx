@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import logo from '../../assets/image/logo.png';
+import logo from '../../assets/image/logo.webp';
 
 function CustomToast({ message, avatar }) {
   return (

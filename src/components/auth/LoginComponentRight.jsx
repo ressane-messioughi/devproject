@@ -1,6 +1,6 @@
-import form from '/icon/form.png';
-import discord from '/icon/discord.png';
-import help from '/icon/help.png';
+import form from '/icon/form.webp';
+import discord from '/icon/discord.webp';
+import help from '/icon/help.webp';
 import OptionButton from '../ui/OptionButton.jsx';
 
 function LoginComponentRight() {
