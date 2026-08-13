@@ -34,12 +34,8 @@ C'est aussi mon projet de fin de formation pour le titre professionnel **Dévelo
 
 |  |  |
 |:--:|:--:|
-| <img src="docs/maquettes/accueil.png" alt="Page d'accueil"> | <img src="docs/maquettes/connexion.png" alt="Connexion"> |
-| **Accueil** | **Connexion** |
-| <img src="docs/maquettes/tableau-de-bord.png" alt="Tableau de bord"> | <img src="docs/maquettes/projets.png" alt="Mes projets"> |
-| **Tableau de bord** | **Mes projets** |
-| <img src="docs/maquettes/equipe.png" alt="Équipe"> | <img src="docs/maquettes/profil.png" alt="Profil"> |
-| **Équipe** | **Profil** |
+| <img src="docs/maquettes/equipe.png" alt="Page équipe"> | <img src="docs/maquettes/profil.png" alt="Page profil"> |
+| **L'équipe et ses rôles** | **Le profil** |
 
 ---
 
