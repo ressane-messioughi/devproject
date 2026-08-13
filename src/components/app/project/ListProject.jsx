@@ -2,7 +2,7 @@
 import { useFetch } from '../../../hooks/useFetch';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Delete from '/icon/delete.png';
+import Delete from '/icon/delete.webp';
 import IconButton from '../../ui/IconButton.jsx';
 import { toast } from 'react-toastify';
 import useProject from '../../../hooks/useProject';

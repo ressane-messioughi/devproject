@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useFetch } from '../../hooks/useFetch.js';
-import logo from '../../assets/image/logo.png';
+import logo from '../../assets/image/logo.webp';
 import { toast } from 'react-toastify';
 import { useNavigate, Link } from 'react-router-dom';
 import AlertBanner from '../ui/AlertBanner.jsx';

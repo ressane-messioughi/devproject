@@ -1,16 +1,16 @@
-import logo from '../../assets/image/logo.png';
+import logo from '../../assets/image/logo.webp';
 import Button from '../ui/Button.jsx';
 import { User } from 'lucide-react';
 import { UserRoundPlus } from 'lucide-react';
-import linkedin from '/icon/linkedin.png';
-import instagram from '/icon/instagram.png';
-import facebook from '/icon/facebook.png';
-import x from '/icon/twitter.png';
+import linkedin from '/icon/linkedin.webp';
+import instagram from '/icon/instagram.webp';
+import facebook from '/icon/facebook.webp';
+import x from '/icon/twitter.webp';
 import { Link } from 'react-router-dom';
 function HeroComponents() {
   return (
     <>
-      <section className="bg-[url('/background.png')] bg-cover min-h-dvh flex flex-col items-center justify-around gap-5">
+      <section className="bg-[url('/background.webp')] bg-cover min-h-dvh flex flex-col items-center justify-around gap-5">
         <div className="flex gap-4 ">
           <Link to="/register">
             <Button className="flex gap-2">
