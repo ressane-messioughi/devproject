@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import dashboard from '/icon/dashboard.png';
-import teamwork from '/icon/teamwork.png';
-import journal from '/icon/journal.png';
-import bug from '/icon/bug.png';
-import GithubTrello from '/icon/githubTrello.png';
-import agile from '/icon/agile.png';
-import parametres from '/icon/parametres.png';
-import shemas from '/icon/shemas.png';
+import dashboard from '/icon/dashboard.webp';
+import teamwork from '/icon/teamwork.webp';
+import journal from '/icon/journal.webp';
+import bug from '/icon/bug.webp';
+import GithubTrello from '/icon/githubTrello.webp';
+import agile from '/icon/agile.webp';
+import parametres from '/icon/parametres.webp';
+import shemas from '/icon/shemas.webp';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { container, item } from '../../ui/PageAnimation.jsx';
@@ -20,8 +20,8 @@ import Button from '../../ui/Button.jsx';
 import { MODAL_INPUT_SM_CLASS } from '../../../constants/formClasses.js';
 import useProject from '../../../hooks/useProject.js';
 import { useFetch } from '../../../hooks/useFetch.js';
-import logoGit from '/icon/github.png';
-import logoTrello from '/icon/trello.png';
+import logoGit from '/icon/github.webp';
+import logoTrello from '/icon/trello.webp';
 
 function MenuHome() {
   const [openModal, setOpenModal] = useState(null);

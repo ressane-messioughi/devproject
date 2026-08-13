@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/image/logo.png';
+import logo from '../../assets/image/logo.webp';
 import { Crown, LogOut, Menu, X } from 'lucide-react';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';

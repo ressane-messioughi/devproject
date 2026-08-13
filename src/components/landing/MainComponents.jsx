@@ -1,5 +1,5 @@
-import Home1 from '../../assets/image/home1.png';
-import Home2 from '../../assets/image/home2.png';
+import Home1 from '../../assets/image/home1.webp';
+import Home2 from '../../assets/image/home2.webp';
 
 function MainComponents() {
   return (
@@ -9,6 +9,7 @@ function MainComponents() {
           <img
             src={Home1}
             className="bg-(--color-background) flex flex-col items-center justify-center gap-4 border border-(--color-card-border) rounded-2xl p-4 shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition duration-300 w-full max-w-100"
+            loading="lazy"
             alt=""
           />
           <p className="w-full max-w-lg p-8 bg-[#b9b2b2] rounded-3xl text-(--color-surface)">
@@ -22,6 +23,7 @@ function MainComponents() {
           <img
             src={Home2}
             className="bg-(--color-background) flex flex-col items-center justify-center gap-4 border border-(--color-card-border) rounded-2xl p-4 shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition duration-300 w-full max-w-100"
+            loading="lazy"
             alt=""
           />
           <p className="w-full max-w-lg p-8 bg-[#b9b2b2] rounded-3xl text-(--color-surface)">
