@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import FieldError from './FieldError.jsx';
 
 describe('FieldError', () => {
-  it('affiche le message de l\'erreur', () => {
+  it("affiche le message de l'erreur", () => {
     // 1. j'affiche le composant dans la page invisible
     render(<FieldError error={{ message: 'Email requis' }} />);
 

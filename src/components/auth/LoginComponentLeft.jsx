@@ -1,10 +1,11 @@
+import logo from '../../assets/image/logo.webp'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/image/logo.webp';
 import { AuthContext } from '../../context/AuthContext.js';
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { useFetch } from '../../hooks/useFetch.js';
+import { getErrorMessage } from '../../utils/getErrorMessage.js';
 import { useForm } from 'react-hook-form';
 import CustomToast from '../ui/CustomToast.jsx';
 import AlertBanner from '../ui/AlertBanner.jsx';
@@ -60,11 +61,14 @@ function LoginComponentLeft() {
         navigate('/panel');
       } else {
         // Capture l'erreur renvoyée par Express (ex: "Mot de passe incorrect")
-        setApiError(result.message || 'Identifiants invalides.');
-        toast.error(result.message || 'Identifiants invalides.');
+        const message = getErrorMessage(result, 'Identifiants invalides.');
+        setApiError(message);
+        toast.error(message);
       }
-    } catch (error) {
-      setApiError('Identifiants invalides', error.message);
+    } catch {
+      // On arrive ici uniquement si le serveur n'a pas repondu du tout
+      // (eteint, pas de reseau). Ce n'est pas un probleme d'identifiants.
+      setApiError('Connexion au serveur impossible. Réessayez dans un instant.');
     }
   };
 

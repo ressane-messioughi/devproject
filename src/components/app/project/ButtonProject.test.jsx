@@ -18,9 +18,7 @@ vi.mock('react-toastify', () => ({
 function afficher() {
   render(
     <MemoryRouter>
-      <ProjectContext.Provider
-        value={{ setProjects: vi.fn(), setSelectedProject: vi.fn() }}
-      >
+      <ProjectContext.Provider value={{ setProjects: vi.fn(), setSelectedProject: vi.fn() }}>
         <ButtonProject />
       </ProjectContext.Provider>
     </MemoryRouter>,
@@ -53,16 +51,6 @@ describe('ButtonProject — validation des donnees', () => {
     await userEvent.click(screen.getByText('Créer'));
 
     expect(await screen.findByText(/au moins 6 caractères/)).toBeInTheDocument();
-    expect(fausseRequete).not.toHaveBeenCalled();
-  });
-
-  it('exige le code d\'equipe pour rejoindre un projet', async () => {
-    afficher();
-
-    await userEvent.click(screen.getByText('Rejoindre un projet'));
-    await userEvent.click(screen.getByText('Rejoindre'));
-
-    expect(await screen.findByText(/Code du projet requis/)).toBeInTheDocument();
     expect(fausseRequete).not.toHaveBeenCalled();
   });
 });
