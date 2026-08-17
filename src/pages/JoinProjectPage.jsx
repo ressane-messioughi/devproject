@@ -2,6 +2,7 @@ import usePageTitle from '../hooks/usePageTitle.js';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch.js';
+import { getErrorMessage } from '../utils/getErrorMessage.js';
 import { toast } from 'react-toastify';
 
 function JoinProjectPage() {
@@ -24,7 +25,7 @@ function JoinProjectPage() {
       const result = await response.json();
 
       if (!response.ok) {
-        toast.error(result.message || 'Impossible de rejoindre ce projet.');
+        toast.error(getErrorMessage(result, 'Impossible de rejoindre ce projet.'));
         setStatus('error');
         navigate('/project');
         return;

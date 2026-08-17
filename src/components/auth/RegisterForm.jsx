@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useFetch } from '../../hooks/useFetch.js';
+import { getErrorMessage } from '../../utils/getErrorMessage.js';
 import logo from '../../assets/image/logo.webp';
 import { toast } from 'react-toastify';
 import { useNavigate, Link } from 'react-router-dom';
@@ -33,7 +34,7 @@ function RegisterForm() {
 
     const result = await res.json();
     if (!res.ok) {
-      setApiError(result.message || 'Inscription impossible.');
+      setApiError(getErrorMessage(result, 'Inscription impossible.'));
       return;
     }
     toast.success('Inscription réussie ! Vous pouvez maintenant vous connecter.');

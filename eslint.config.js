@@ -48,4 +48,16 @@ export default [
       'react-refresh/only-export-components': 'warn',
     },
   },
+
+  // Les fichiers de configuration s'executent dans Node et non dans le
+  // navigateur : ils ont donc acces a process, __dirname, etc.
+  {
+    files: ['*.config.js'],
+
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
 ];
