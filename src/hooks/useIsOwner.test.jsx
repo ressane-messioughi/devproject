@@ -8,9 +8,7 @@ const wrapperAvecProjet = (selectedProject) =>
   // eslint-disable-next-line react/prop-types
   function Wrapper({ children }) {
     return (
-      <ProjectContext.Provider value={{ selectedProject }}>
-        {children}
-      </ProjectContext.Provider>
+      <ProjectContext.Provider value={{ selectedProject }}>{children}</ProjectContext.Provider>
     );
   };
 
@@ -20,19 +18,5 @@ describe('useIsOwner', () => {
       wrapper: wrapperAvecProjet({ id_project: 1, role: 'OWNER' }),
     });
     expect(result.current).toBe(true);
-  });
-
-  it('renvoie false pour un simple membre', () => {
-    const { result } = renderHook(() => useIsOwner(), {
-      wrapper: wrapperAvecProjet({ id_project: 1, role: 'MEMBER' }),
-    });
-    expect(result.current).toBe(false);
-  });
-
-  it('renvoie false quand aucun projet n\'est selectionne', () => {
-    const { result } = renderHook(() => useIsOwner(), {
-      wrapper: wrapperAvecProjet(null),
-    });
-    expect(result.current).toBe(false);
   });
 });

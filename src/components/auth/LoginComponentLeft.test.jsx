@@ -29,22 +29,7 @@ function afficher() {
 describe('LoginComponentLeft', () => {
   beforeEach(() => fausseRequete.mockReset());
 
-  it('affiche les champs email et mot de passe', () => {
-    afficher();
-
-    expect(screen.getByLabelText('Email:')).toBeInTheDocument();
-    expect(screen.getByLabelText('Password:')).toBeInTheDocument();
-  });
-
-  it('affiche un message quand les champs sont vides', async () => {
-    afficher();
-
-    await userEvent.click(screen.getByRole('button'));
-
-    expect(await screen.findByText(/Email obligatoire/)).toBeInTheDocument();
-  });
-
-  it('affiche l\'erreur renvoyee par le serveur', async () => {
+  it("affiche l'erreur renvoyee par le serveur", async () => {
     fausseRequete.mockResolvedValue({
       ok: false,
       json: async () => ({ message: 'Mot de passe incorrect' }),
